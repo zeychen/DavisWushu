@@ -54,13 +54,13 @@ header {
   header .nav {
     margin: auto;
     width: 80%;
-    padding: 20px; }
+    padding: 20px;
+    text-align: center; }
     header .nav .navbar ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0; }
+      list-style-type: none; }
     header .nav .navbar li {
-      display: inline-block; }
+      display: inline-block;
+      padding: 20px; }
       header .nav .navbar li a {
         color: #ffffff;
         font-size: 1.2em; }

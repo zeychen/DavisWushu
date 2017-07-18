@@ -16,16 +16,16 @@ header {
 		margin: auto;
 		width: 80%;
 		padding: $regular-mp;
+		text-align: center;
 
 		.navbar {
 			ul {
 				list-style-type: none;
-			    margin: 0;
-			    padding: 0;
 			}
 
 			li {
 				display: inline-block;
+				padding: 20px;
 
 				a {
 					color: $secondary-text-color;

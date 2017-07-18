@@ -1,0 +1,119 @@
+/*$large-mp: ;*/
+/*$small-mp: ;*/
+html,
+body {
+  font-family: "Muli", Helvetica, sans-serif;
+  width: 100vw;
+  margin: 0px; }
+
+h1 {
+  font-family: sans-serif;
+  margin-top: 0px; }
+
+a {
+  text-decoration: none; }
+
+.no-margin-bottom {
+  margin-bottom: 0px; }
+
+.no-margin-top {
+  margin-top: 0px; }
+
+.xlarge-font-size {
+  font-size: 4.5em; }
+
+.large-font-size {
+  font-size: 2em; }
+
+.regular-font-size {
+  font-size: 1.2em; }
+
+.text-left {
+  text-align: left; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+header {
+  background-image: none, url("green-circle.svg"); }
+
+.section-box {
+  background: #f2f3f4;
+  width: 325px;
+  padding: 55px;
+  color: #032e62;
+  text-align: center; }
+  .section-box h1 {
+    font-weight: 700;
+    letter-spacing: 1.5px; }
+  .section-box .description-text {
+    font-size: 1.2em; }
+
+.nav {
+  margin: auto;
+  width: 50%;
+  padding: 20px; }
+  .nav .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .nav .navbar li {
+    display: inline;
+    margin-left: 25px;
+    margin-right: 25px; }
+    .nav .navbar li a {
+      color: #032e62;
+      font-size: 1.2em; }
+
+.about-section h1 {
+  color: #032e62; }
+
+#practice-section,
+#contact-section {
+  background: #032e62;
+  color: #ffffff;
+  padding: 200px;
+  clip-path: polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%); }
+
+#fb-section {
+  height: 500px;
+  background: #032e62;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#032e62, #600020, #032e62);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#032e62, #600020, #032e62);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#032e62, #600020, #032e62);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#032e62, #600020, #032e62);
+  /* Standard syntax (must be last) */
+  color: #ffffff;
+  padding: 200px;
+  clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 80%); }
+
+#practice-section,
+#fb-section,
+#contact-section,
+#credit-section {
+  text-align: center; }
+
+.small-box {
+  width: 240px;
+  margin: auto; }
+
+.mid-box {
+  width: 360px;
+  margin: auto; }
+
+#member-box {
+  margin-left: 200px; }
+
+.member-link {
+  color: #600020; }
+
+.credit {
+  color: #cccccc; }
+  .credit a {
+    color: #cccccc; }
+
+/*# sourceMappingURL=base.css.map */

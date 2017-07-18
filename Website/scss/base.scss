@@ -1,0 +1,105 @@
+@import 'declarations';
+@import 'general';
+@import 'svg';
+
+
+.section-box {
+	background: $secondary-bkgd-color;
+	width: 325px;
+	padding: 55px;
+	color: $primary-text-color;
+	text-align: center;
+
+	h1 {
+		font-weight: $bold;
+		letter-spacing: 1.5px;
+	}
+
+	.description-text {
+		font-size: $text-size;
+	}
+}
+
+.nav {
+	margin: auto;
+	width: 50%;
+	padding: $regular-mp;
+
+	.navbar {
+		ul {
+			list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		}
+
+		li {
+			display: inline;
+			margin-left: 25px;
+			margin-right: 25px;
+
+			a {
+				color: $primary-text-color;
+				font-size: $text-size;
+			}
+		}
+	}	
+}
+
+.about-section {
+	h1 {
+		color: $primary-text-color;
+	}
+}
+
+#practice-section,
+#contact-section {
+	background: $primary-theme-color; 
+	color: $secondary-text-color;
+	padding: 200px;
+	clip-path: polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%);
+}
+
+#fb-section {
+	height: 500px;
+    background: $primary-theme-color; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($primary-theme-color, $secondary-link-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($primary-theme-color, $secondary-link-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($primary-theme-color, $secondary-link-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($primary-theme-color, $secondary-link-color, $primary-theme-color); /* Standard syntax (must be last) */ 
+	color: $secondary-text-color;
+	padding: 200px;
+	clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+#practice-section,
+#fb-section,
+#contact-section,
+#credit-section {
+	text-align: center;
+}
+
+.small-box {
+	width: 240px;
+	margin: auto;
+}
+
+.mid-box {
+	width: 360px;
+	margin: auto;
+}
+
+#member-box {
+	margin-left: 200px;
+}
+
+.member-link {
+	color: $secondary-link-color;
+}
+
+.credit {
+	color: $credit-text-color;
+
+	a {
+		color: $credit-text-color;
+	}
+}

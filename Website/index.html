@@ -6,84 +6,88 @@
 		<meta name="description" content="Davis Wushu" />
 		<meta name="keywords" content="davis wushu, chinese martial arts, california, uc davis" />
 		<meta name="author" content="Zee Chen" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="scss/base.css" />
+		<link href="https://fonts.googleapis.com/css?family=Muli|Lato:700" rel="stylesheet">
 	</head>
 
 	<body>
-	<div class="nav">
-		<ul>
-			<li>About</li>
-			<li>Practices</li>
-			<li>Events</li>
-			<li>Members</li>
-			<li>Collaborate</li>
-		</ul>
-	</div>
-	<div class="header">
-		<h1>Davis Wushu</h1>
-	</div>
+		<header>
+			<div class="nav">
+				<ul class="navbar">
+					<li><a href="#">About</a></li>
+					<li><a href="#">Practices</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#">Members</a></li>
+					<li><a href="#">Collaborate</a></li>
+				</ul>
+			</div>
+			<div class="header">
+				<h1>Davis Wushu</h1>
+			</div>
+		</header>
 
 
-	<div class="section">
-		<h1>About</h1>
-		<p>We are a Chinese martial arts club formed by UC Davis students in 2000 that focuses on endurance, flexibility, and strength.</p>
-	</div>
-
-	<div><span>Endurance</span></div>
-	<div><span>Flexibility</span></div>
-	<div><span>Strength</span></div>
-
-	<div>
-		<p>Practice Makes</p>
-		<p>Perfect</p>
-
-		<p>UC Davis Pavilion</p>
-		<p>Mon & Wed</p>
-		<p>6-8PM</p>
-
-		<p>All levels are welcome</p>
-	</div>
-
-	<div>
-		<p>Our club trains practitioners of all skill levels to perform demonstrations for local events and compete in the taolu (forms) portion of annual tournaments, such as Davis Dance Revolution, the Chinese Martial Arts Tournament (CMAT), and the Collegiate Wushu Championships.</p>
-	</div>
-
-	<div>
-		<p>we love to train</p>
-		<p>but we also like to have fun</p>
-
-		<p>join our FB group</p>
-		<p>keep updated about our latest events and much more</p>
-	</div>
-
-	<div>
-		<div>
-			<p>Members</p>
-			<p>Our club would not be possible without our wonderful members who put in valuable time and effort to make Davis Wushu a success.</p>
-			<p>Meet The Members</p>
+		<div class="section-box" id="about-box">
+			<h1>About</h1>
+			<p class="description-text">We are a Chinese martial arts club formed by UC Davis students in 2000 that focuses on endurance, flexibility, and strength.</p>
 		</div>
-		<div>
-			<p>Officers</p>
-			<p>Our officers are dedicated students who make sure Davis Wushu thrives.</p>
-			<p>Meet The Members</p>
-		</div>
-		<div>
-			<p>Coaches</p>
-			<p>Our coaches are well trained Wushu practitioners who take time out of their busy student lives to teach others members who are interested in learning or improving their skills.</p>
-			<p>Meet The Members</p>
-		</div>
-	</div>
 
-	<div>
-		<p>Have More Questions?</p>
-		<p>Whether you want us at your next event or simply to say hi</p>
-		<p>We are are quick email away</p>
-		<p>daviswushu@ucdavis.edu</p>
-	</div>
+		<div class="about-section">
+			<h1>Endurance</h1>
+			<h1>Flexibility</h1>
+			<h1>Strength</h1>
+		</div>
 
-	<div>
-		<p class="credit">website designed and created by <a class="credit-link">Zee Chen</a> and Wushu vector art by <a class="credit-link">Vecteezy</a></p>
-	</div>
+		<div id="practice-section">
+			<p class="no-margin-bottom large-font-size">Practice Makes</p>
+			<p class="no-margin-top xlarge-font-size">Perfect</p>
+
+			<p class="no-margin-bottom regular-font-size">UC Davis Pavilion</p>
+			<p class="no-margin-top large-font-size">Mon & Wed<br>6-8PM</p>
+
+			<p>All levels are welcome</p>
+		</div>
+
+		<div class="section-box">
+			<p class="description-text text-left">Our club trains practitioners of all skill levels to perform demonstrations for local events and compete in the taolu (forms) portion of annual tournaments, such as Davis Dance Revolution, the Chinese Martial Arts Tournament (CMAT), and the Collegiate Wushu Championships.</p>
+		</div>
+
+		<div id="fb-section">
+			<p class="capitalize large-font-size">we love to train</p>
+			<p class="capitalize large-font-size">but we also like to have fun</p>
+
+			<p class="capitalize regular-font-size">join our FB group</p>
+			<p class="small-box">keep updated about our latest events and much more</p>
+		</div>
+
+		<div class="section-box" id="member-box">
+			<div>
+				<h1>Members</h1>
+				<p class="description-text">Our club would not be possible without our wonderful members who put in valuable time and effort to make Davis Wushu a success.</p>
+				<p class="member-link">Meet The Members</p>
+			</div>
+			<div>
+				<h1>Officers</h1>
+				<p class="description-text">Our officers are dedicated students who make sure Davis Wushu thrives.</p>
+				<p class="member-link">Meet The Officers</p>
+			</div>
+			<div>
+				<h1>Coaches</h1>
+				<p class="description-text">Our coaches are well trained Wushu practitioners who take time out of their busy student lives to teach others members who are interested in learning or improving their skills.</p>
+				<p class="member-link">Meet The Coaches</p>
+			</div>
+		</div>
+
+		<div id="contact-section">
+			<p class="no-margin-bottom large-font-size">Have More Questions?</p>
+			<p class="regular-font-size mid-box">Whether you want us at your next event or simply to say hi</p>
+			<p class="regular-font-size">We are a quick email away</p>
+			<p class="regular-font-size">daviswushu@ucdavis.edu</p>
+		</div>
+
+		<div id="credit-section">
+			<p class="credit">website designed and created by <a href="">Zee Chen</a> and Wushu vector art by <a target="_blank" href="https://www.vecteezy.com/">Vecteezy</a></p>
+		</div>
 
 	</body>
 </html>

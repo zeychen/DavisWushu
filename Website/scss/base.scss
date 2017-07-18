@@ -2,6 +2,39 @@
 @import 'general';
 @import 'svg';
 
+header {
+	height: 300px;
+    background: $primary-theme-color; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
+	padding: 20px;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
+
+	.nav {
+		margin: auto;
+		width: 80%;
+		padding: $regular-mp;
+
+		.navbar {
+			ul {
+				list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			}
+
+			li {
+				display: inline-block;
+
+				a {
+					color: $secondary-text-color;
+					font-size: $text-size;
+				}
+			}
+		}	
+	}
+}
 
 .section-box {
 	background: $secondary-bkgd-color;
@@ -20,30 +53,7 @@
 	}
 }
 
-.nav {
-	margin: auto;
-	width: 50%;
-	padding: $regular-mp;
-
-	.navbar {
-		ul {
-			list-style-type: none;
-		    margin: 0;
-		    padding: 0;
-		}
-
-		li {
-			display: inline;
-			margin-left: 25px;
-			margin-right: 25px;
-
-			a {
-				color: $primary-text-color;
-				font-size: $text-size;
-			}
-		}
-	}	
-}
+	
 
 .about-section {
 	h1 {
@@ -62,10 +72,10 @@
 #fb-section {
 	height: 500px;
     background: $primary-theme-color; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient($primary-theme-color, $secondary-link-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient($primary-theme-color, $secondary-link-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient($primary-theme-color, $secondary-link-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
-    background: linear-gradient($primary-theme-color, $secondary-link-color, $primary-theme-color); /* Standard syntax (must be last) */ 
+    background: -webkit-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
 	color: $secondary-text-color;
 	padding: 200px;
 	clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 80%);

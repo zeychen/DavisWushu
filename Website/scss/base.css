@@ -37,6 +37,34 @@ a {
 header {
   background-image: none, url("green-circle.svg"); }
 
+header {
+  height: 300px;
+  background: #032e62;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#600020, #032e62, #032e62, #032e62);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#600020, #032e62, #032e62, #032e62);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#600020, #032e62, #032e62, #032e62);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#600020, #032e62, #032e62, #032e62);
+  /* Standard syntax (must be last) */
+  padding: 20px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%); }
+  header .nav {
+    margin: auto;
+    width: 80%;
+    padding: 20px; }
+    header .nav .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+    header .nav .navbar li {
+      display: inline-block; }
+      header .nav .navbar li a {
+        color: #ffffff;
+        font-size: 1.2em; }
+
 .section-box {
   background: #f2f3f4;
   width: 325px;
@@ -48,22 +76,6 @@ header {
     letter-spacing: 1.5px; }
   .section-box .description-text {
     font-size: 1.2em; }
-
-.nav {
-  margin: auto;
-  width: 50%;
-  padding: 20px; }
-  .nav .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-  .nav .navbar li {
-    display: inline;
-    margin-left: 25px;
-    margin-right: 25px; }
-    .nav .navbar li a {
-      color: #032e62;
-      font-size: 1.2em; }
 
 .about-section h1 {
   color: #032e62; }
@@ -79,13 +91,13 @@ header {
   height: 500px;
   background: #032e62;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#032e62, #600020, #032e62);
+  background: -webkit-linear-gradient(#032e62, #032e62, #600020, #032e62, #032e62);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#032e62, #600020, #032e62);
+  background: -o-linear-gradient(#032e62, #032e62, #600020, #032e62, #032e62);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#032e62, #600020, #032e62);
+  background: -moz-linear-gradient(#032e62, #032e62, #600020, #032e62, #032e62);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#032e62, #600020, #032e62);
+  background: linear-gradient(#032e62, #032e62, #600020, #032e62, #032e62);
   /* Standard syntax (must be last) */
   color: #ffffff;
   padding: 200px;

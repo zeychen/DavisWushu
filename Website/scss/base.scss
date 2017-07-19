@@ -3,18 +3,17 @@
 @import 'svg';
 
 header {
-	height: 90vh;
+	height: 70vh;
     background: $primary-theme-color; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
     background: linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
 	padding-bottom: 20px;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
 
 	.nav {
 		margin: auto;
-		width: 80%;
 		padding: $regular-mp;
 		text-align: center;
 
@@ -49,7 +48,7 @@ header {
 .section-box {
 	background: $secondary-bkgd-color;
 	width: 25%;
-	padding: 55px;
+	padding: 50px;
 	color: $primary-text-color;
 	text-align: center;
 	position: absolute;
@@ -65,23 +64,36 @@ header {
 	}
 }
 
-// sections
+/* ============================= sections ============================= */
+// about section
 #about-section {
+	// height: 400px;
 	h1 {
 		color: $primary-text-color;
 	}
 }
 
-#practice-section,
-#contact-section {
-	z-index: 10;
-	background: $primary-theme-color; 
-	color: $secondary-text-color;
-	padding: 200px;
-	clip-path: polygon(0% 0%, 100% 20%, 100% 80%, 0% 100%);
+#practice-section {
+	// top: -200px;
 }
 
+// practice & contact sections
+#practice-section,
+#contact-section {
+	text-align: center;
+	background: $primary-theme-color; 
+	color: $secondary-text-color;
+	padding: 100px;
+	height: 500px;
+	clip-path: polygon(0% 0%, 100% 10%, 100% 80%, 0% 100%);
+	overflow: visible;
+	z-index: 100;
+}
+
+// fb section
 #fb-section {
+	// top:-300px;
+	position:relative;
 	height: 500px;
     background: $primary-theme-color; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
@@ -89,32 +101,42 @@ header {
     background: -moz-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
     background: linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
 	color: $secondary-text-color;
-	padding: 200px;
-	clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 80%);
+	padding: 100px;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
 }
 
-#practice-section,
 #fb-section,
-#contact-section,
 #credit-section {
 	text-align: center;
+	overflow: visible;
 }
 
-// boxes
-#about-box {
-	height: 500px;
-	top: 50%;
-	left: 20%;
-	
+#practice-info {
+	width:50vw;
+	left: 0;
 }
+
+/* ============================= boxes ============================= */
+// #about-box {
+// 	height: 500px;
+// 	top: 50vh;
+// 	left: 20vw;
+// }
 
 #practice-box {
-	left: 50%;
+	z-index:100;
+	position: absolute;
+	left: 55vw;
+	-ms-transform: translateY(-500px); /* IE 9 */
+    -webkit-transform: translateY(-500px); /* Safari */
+    transform: translateY(-500px);
 }
 
-#member-box {
-	left: 20%;
-}
+// #member-box {
+// 	left: 20vw;
+// 	overflow: visible;
+
+// }
 
 .member-link {
 	color: $secondary-link-color;
@@ -126,4 +148,21 @@ header {
 	a {
 		color: $credit-text-color;
 	}
+}
+
+/* ============================= background ============================= */
+.video-background {
+	position: relative;
+	// top: -25vh;
+  	background: $primary-bkgd-color;
+  	z-index: -99;
+  	height: 100vh;
+  	width: 100vw
+}
+.video-foreground,
+.video-background iframe {
+	// top: -100;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }

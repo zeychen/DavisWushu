@@ -26,27 +26,39 @@ header {
 		width: 100%;
 		height: 100%;
 		pointer-events: none;
+		min-height: 100px;
+		-webkit-transition: -webkit-transform 3s ease;
+	  	transition: transform 3s ease;
 	}
 
 	.tint {
 		display: block;
 		position: absolute;
 		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+		width: 100vw;
+		height: 100vh;
 		z-index: 10;
 		background: rgba(0, 0, 0, 0.5);
+		transition: background 3s ease;
+		min-height: 100px;
+		-webkit-transition: -webkit-transform 3s ease;
+	  	transition: transform 3s ease;
+	}
+
+	.anim{
+	    -webkit-transform:translate(0px,-88vh);
+	    transform:translate(0px,-88vh);
+	    position: fixed;
 	}
 
 	.nav {
 		padding: $regular-mp;
 		text-align: center;
-		position:absolute;
-		top: 10%;
+		position: fixed;
+		top: 0;
 		right: 20%;
+		margin: auto;
 		z-index: 100;
-
 
 		.navbar {
 			ul {
@@ -64,6 +76,7 @@ header {
 			}
 		}	
 	}
+
 	.welcome {
 		text-align: center;
 		width: 50%;
@@ -119,109 +132,78 @@ header {
 // 	margin: auto;
 // }
 
-.section-box {
-	background: $primary-bkgd-color;
-	width: 25%;
-	padding: 50px;
-	color: $primary-text-color;
-	text-align: center;
-	position: absolute;
-	z-index: 1;
+// .section-box {
+// 	background: $primary-bkgd-color;
+// 	width: 25%;
+// 	padding: 50px;
+// 	color: $primary-text-color;
+// 	text-align: center;
+// 	position: absolute;
+// 	z-index: 1;
 
-	h1 {
-		font-weight: $bold;
-		letter-spacing: 1.5px;
-	}
+// 	h1 {
+// 		font-weight: $bold;
+// 		letter-spacing: 1.5px;
+// 	}
 
-	.description-text {
-		font-size: $text-size;
-	}
-}
+// 	.description-text {
+// 		font-size: $text-size;
+// 	}
+// }
 
 /* ============================= sections ============================= */
 // about section
-#about-section {
-	// height: 400px;
-	h1 {
-		color: $primary-text-color;
-	}
-}
-
-#practice-section {
-	// top: -200px;
-}
-
-// practice & contact sections
-#practice-section,
-#contact-section {
-	text-align: center;
-	background: $primary-theme-color; 
-	color: $secondary-text-color;
-	padding: 100px;
-	height: 500px;
-	clip-path: polygon(0% 0%, 100% 10%, 100% 80%, 0% 100%);
-	overflow: visible;
-	z-index: 100;
-}
-
-// fb section
-#fb-section {
-	// top:-300px;
-	position:relative;
-	height: 500px;
-    background: $primary-theme-color; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
-    background: linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
-	color: $secondary-text-color;
-	padding: 100px;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
-}
-
-#fb-section,
-#credit-section {
-	text-align: center;
-	overflow: visible;
-}
-
-#practice-info {
-	width:50vw;
-	left: 0;
-}
-
-/* ============================= boxes ============================= */
-#about-box {
-	height: 500px;
-	top: 50vh;
-	left: 20vw;
-}
-
-#practice-box {
-	z-index:100;
-	position: absolute;
-	left: 55vw;
-	-ms-transform: translateY(-500px); /* IE 9 */
-    -webkit-transform: translateY(-500px); /* Safari */
-    transform: translateY(-500px);
-}
-
-// #member-box {
-// 	left: 20vw;
-// 	overflow: visible;
-
+// #about-section {
+// 	// height: 400px;
+// 	h1 {
+// 		color: $primary-text-color;
+// 	}
 // }
 
-.member-link {
-	color: $secondary-link-color;
-}
+// #practice-section {
+// 	// top: -200px;
+// }
 
-.credit {
-	color: $credit-text-color;
+// // practice & contact sections
+// #practice-section,
+// #contact-section {
+// 	text-align: center;
+// 	background: $primary-theme-color; 
+// 	color: $secondary-text-color;
+// 	padding: 100px;
+// 	height: 500px;
+// 	clip-path: polygon(0% 0%, 100% 10%, 100% 80%, 0% 100%);
+// 	overflow: visible;
+// 	z-index: 100;
+// }
 
-	a {
-		color: $credit-text-color;
-	}
-}
+// // fb section
+// #fb-section {
+// 	// top:-300px;
+// 	position:relative;
+// 	height: 500px;
+//     background: $primary-theme-color; /* For browsers that do not support gradients */
+//     background: -webkit-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
+//     background: -o-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
+//     background: -moz-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
+//     background: linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
+// 	color: $secondary-text-color;
+// 	padding: 100px;
+// 	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+// }
+
+// #fb-section,
+// #credit-section {
+// 	text-align: center;
+// 	overflow: visible;
+// }
+
+// #practice-info {
+// 	width:50vw;
+// 	left: 0;
+// }
+
+/* ============================= boxes ============================= */
+
 
 /* ============================= background ============================= */

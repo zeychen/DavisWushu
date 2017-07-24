@@ -3,19 +3,50 @@
 @import 'svg';
 
 header {
-	height: 70vh;
-    background: $primary-theme-color; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
-    background: linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
-	padding-bottom: 20px;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+	height: 100vh;
+    // background: $primary-theme-color; /* For browsers that do not support gradients */
+ //    background: -webkit-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
+ //    background: -o-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); For Opera 11.1 to 12.0
+ //    background: -moz-linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
+ //    background: linear-gradient($secondary-link-color, $primary-theme-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
+	// padding-bottom: 20px;
+	// clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+	// opacity: 50%;
+
+	.video-background {
+	  	// background: $primary-bkgd-color;
+	  	z-index: -99;
+	  	height: 100vh;
+	  	width: 100vw;
+	}
+
+	.video-foreground,
+	.video-background iframe {
+		opacity: 50%;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.tint {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 10;
+		background: rgba(0, 0, 0, 0.5);
+	}
 
 	.nav {
-		margin: auto;
 		padding: $regular-mp;
 		text-align: center;
+		position:absolute;
+		top: 10%;
+		right: 20%;
+		z-index: 100;
+
 
 		.navbar {
 			ul {
@@ -33,20 +64,63 @@ header {
 			}
 		}	
 	}
+	.welcome {
+		text-align: center;
+		width: 50%;
+		position: absolute;
+		right: 0px;
+		top: 30%;
+		padding: $small-mp;
+		z-index: 100;
+
+		p{
+			color: $secondary-text-color;
+			font-size: $title-size;
+			margin: 0px;
+		}
+
+		#headerText1 {
+			text-transform: capitalize;
+		}
+
+		#headerText2 {
+			text-transform: lowercase;
+			font-size: $text-size;
+			margin-top: 15px;
+		}
+
+		#headerText3 {
+			text-transform: uppercase;
+			font-family: $header-font-stack;
+			font-size: $header-size;
+			margin-top: 15px;
+		}
+
+		#headerText4 {
+			text-transform: uppercase;
+			font-size: 3.5em;
+			margin-bottom: 30px;
+		}
+
+		#headerText5 {
+			text-transform: capitalize;
+			font-size: $text-size;
+		}
+	}
 }
 
-.small-box {
-	width: 240px;
-	margin: auto;
-}
+// .small-box {
+// 	width: 240px;
+// 	margin: auto;
+// }
 
-.mid-box {
-	width: 360px;
-	margin: auto;
-}
+// .mid-box {
+// 	width: 360px;
+// 	margin: auto;
+// }
 
 .section-box {
-	background: $secondary-bkgd-color;
+	background: $primary-bkgd-color;
 	width: 25%;
 	padding: 50px;
 	color: $primary-text-color;
@@ -117,11 +191,11 @@ header {
 }
 
 /* ============================= boxes ============================= */
-// #about-box {
-// 	height: 500px;
-// 	top: 50vh;
-// 	left: 20vw;
-// }
+#about-box {
+	height: 500px;
+	top: 50vh;
+	left: 20vw;
+}
 
 #practice-box {
 	z-index:100;
@@ -151,18 +225,3 @@ header {
 }
 
 /* ============================= background ============================= */
-.video-background {
-	position: relative;
-	// top: -25vh;
-  	background: $primary-bkgd-color;
-  	z-index: -99;
-  	height: 100vh;
-  	width: 100vw
-}
-.video-foreground,
-.video-background iframe {
-	// top: -100;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}

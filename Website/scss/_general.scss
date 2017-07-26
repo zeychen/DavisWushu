@@ -47,7 +47,7 @@ a {
 }
 
 .section-box {
-	width: 25%;
+	width: 300px;
 	padding: 50px;
 	background: $primary-bkgd-color;
 	color: $primary-text-color;
@@ -69,27 +69,13 @@ a {
 	width: 100vw;
 	height: 200px;
 	position: absolute;
-	background: $primary-theme-color;
+	background: $secondary-theme-color;
 	color: $secondary-text-color;
-
-	p {
-		padding-top: $large-mp;
-		font-size: 1.2em;
-		width: 40vw;
-		margin-left: -50vw;
-	}
-
-	#practice-title {
-		padding-top: $large-mp;
-		margin-left: -50vw;
-		font-size: 2em;
-	}
 }
 
 
 .lower-box {
 	width: 100%;
 	height: 200px;
-	// position: ;
 	background: $primary-theme-color;
 }

@@ -25,27 +25,42 @@ $(document).ready(function(){
 	/* =============== Parallax =============== */
 	var parallax1 = new ScrollMagic.Scene({triggerElement: "#about-section"})
 		.setTween("#about-bkgd-box, #about-lower-box", {y: "80%", ease: Linear.easeNone})
-		.addIndicators({name: "parallax 1"})
+		// .addIndicators({name: "parallax 1"})
 		.addTo(centerController);
 
 	var parallax2 = new ScrollMagic.Scene({triggerElement: "#practice-section"})
-		.setTween("#practice-box", 2, {y: "90%", ease: Power2.easeInOut, opacity: 1})
-		.addIndicators({name: "parallax 2"})
+		.setTween("#practice-box", 1, {y: "30%", ease: Power2.easeInOut, opacity: 1})
+		// .addIndicators({name: "parallax 2"})
 		.addTo(centerController);
 
 	var parallax3 = new ScrollMagic.Scene({triggerElement: "#practice-section"})
 		.setTween("#practice-info", {y: "60%", ease: Linear.easeNone, opacity: 1})
-		.addIndicators({name: "parallax 3"})
+		// .addIndicators({name: "parallax 3"})
 		.addTo(centerController);
 		
 	var parallax4 = new ScrollMagic.Scene({triggerElement: "#practice-section"})
 		.setTween("#practice-lower-box", {y: "80%", ease: Linear.easeNone})
-		.addIndicators({name: "parallax 4"})
+		// .addIndicators({name: "parallax 4"})
 		.addTo(centerController);
 
-	var parallax5 = new ScrollMagic.Scene({triggerElement: "#trigger"})
+	var parallax5 = new ScrollMagic.Scene({triggerElement: "#member-box"})
 		.setTween("#practice-section", {y: "50%", ease: Linear.easeNone})
-		.addIndicators({name: "parallax 5"})
+		// .addIndicators({name: "parallax 5"})
+		.addTo(leaveController);
+
+	var parallax6 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
+		.setTween('#social-section', {y: "65%", ease: Linear.easeNone})
+		// .addIndicators({name: "parallax 6"})
+		.addTo(centerController);
+
+	var parallax7 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
+		.setTween('#contact-upper-box', {y: "100%", ease: Linear.easeNone})
+		// .addIndicators({name: "parallax 7"})
+		.addTo(centerController);
+
+	var parallax8 = new ScrollMagic.Scene({triggerElement: '#contact-section', duration: '10'})
+		.setTween('#footer', {y: "80%", ease: Linear.easeNone})
+		// .addIndicators({name: "parallax 8"})
 		.addTo(centerController);
 
 	/* =============== Animation =============== */
@@ -55,63 +70,83 @@ $(document).ready(function(){
 	// 	.addIndicators({name: "5 stance"})
 	// 	.addTo(centerController);
 
-	/* =============== Nav Bar =============== */
+	/* =============== Header =============== */
 	var navBar = new ScrollMagic.Scene({offset: 100})
 		.setPin('#nav')
-		.setTween('#nav', 0.1, {backgroundColor: '#032e62'})
-		.addIndicators({name: "1"})
+		.setTween('#nav', 0.1, {backgroundColor: '#01243C'})
+		// .addIndicators({name: "1"})
 		.addTo(leaveController);
 
-	/* =============== Welcome Video =============== */
+	var navItem = new ScrollMagic.Scene({offset: 100})
+		.setTween('.nav-item', 0.1, {color: '#CA9716'})
+		// .addIndicators({name: "1"})
+		.addTo(leaveController);
+
 	var blurElement = {a:0};
 	var welcomeVid = new ScrollMagic.Scene({offset: 50})
 		.setTween(blurElement, 0.5, {a:5, onUpdate:applyBlur})
-		.addIndicators({name: "3"})
+		// .addIndicators({name: "3"})
 		.addTo(leaveController);
 
-	/* =============== Welcome Text =============== */
 	var welcomeText = new ScrollMagic.Scene({offset: 50})
 		.setTween('#welcome', 1, {opacity: 0})
-		.addIndicators({name: "2"})
+		// .addIndicators({name: "2"})
 		.addTo(leaveController);
 
 	/* =============== About Section =============== */
 	var aboutSection = new ScrollMagic.Scene({offset: ofHeight})
 		.setTween('#about-text', 1, {marginLeft: '10vw'})
-		.addIndicators({name: "4"})
+		// .addIndicators({name: "4"})
 		.addTo(leaveController);
 
-	var aboutBkgdTween = new TweenMax.to('#endurance', 1, {opacity: '0.5'});
+	var aboutBkgdTween = new TweenMax.to('#endurance, #flexibility, #strength', 1, {opacity: '0.5'});
 
 	var endurance = new ScrollMagic.Scene({triggerElement: '#about-section'})
 		.setTween(aboutBkgdTween)
-		.addIndicators({name: "6"})
+		// .addIndicators({name: "6"})
 		.addTo(centerController);
 
 	/* =============== Practice Section =============== */
 	var practiceSection = new ScrollMagic.Scene({triggerElement: '#practice-section'})
-		.setTween('#practice-title', 2, {marginLeft: '10vw'})
-		.addIndicators({name: "5"})
+		.setTween('#practice-title', 1, {marginLeft: '10vw'})
+		// .addIndicators({name: "5"})
 		.addTo(centerController);
 
+	/* =============== Social Section =============== */
 	var socialLink = new ScrollMagic.Scene({triggerElement: '#trigger2'})
 		.setTween('.social-link', 1, {opacity: 1, y: '20px'})
-		.addIndicators({name: "social text"})
+		// .addIndicators({name: "social text"})
 		.addTo(centerController);
 
 	var socialText1 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
 		.setTween('#social1', 0.5, {y: '-20px'})
-		.addIndicators({name: "social text"})
+		// .addIndicators({name: "social text"})
 		.addTo(centerController);
 
 	var socialText2 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
 		.setTween('#social2', 0.5, {y: '20px'})
-		.addIndicators({name: "social text"})
+		// .addIndicators({name: "social text"})
 		.addTo(centerController);
 
-	var socialText2 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
+	var socialText3 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
 		.setTween('#social3', 0.5, {y: '50px'})
-		.addIndicators({name: "social text"})
+		// .addIndicators({name: "social text"})
+		.addTo(centerController);
+
+	var socialText4 = new ScrollMagic.Scene({triggerElement: '#contact-section'})
+		.setTween('#social4', 0.5, {marginLeft: '10vw'})
+		// .addIndicators({name: "social text"})
+		.addTo(centerController);
+
+	/* =============== Contact Section =============== */
+	var contactSection = new ScrollMagic.Scene({triggerElement: '#contact-section'})
+		.setTween('#contact-text', 1, {marginLeft: '60vw', y: '-68px'})
+		// .addIndicators({name: "contact text"})
+		.addTo(centerController);
+
+	var emailText = new ScrollMagic.Scene({triggerElement: '#contact-section'})
+		.setTween('#contactText3', 0.5, {opacity: 1, delay: 1})
+		// .addIndicators({name: "contact text"})
 		.addTo(centerController);
 
 	/* =============== Helper Functions =============== */

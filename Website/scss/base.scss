@@ -54,9 +54,7 @@
 				display: inline-block;
 				padding-left: 30px;
 				padding-right: 30px;
-				a {
-					color: $secondary-text-color;
-				}
+				color: $secondary-text-color;
 			}
 		}	
 	}
@@ -114,6 +112,13 @@
 	#about-upper-box {
 		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
 		overflow: hidden;
+
+		#about-text {
+			padding-top: $large-mp;
+			font-size: $subtext-size;
+			width: 40vw;
+			margin-left: -50vw;
+		}
 	}
 
 	#about-bkgd-box{
@@ -158,18 +163,18 @@
 
 /* == practice section == */
 #practice-section {
-	// margin: 0;
-	// width: 100vw;
-
 	#practice-upper-box {
 		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
 		overflow: hidden;
+
+		#practice-title {
+			padding-top: $large-mp;
+			margin-left: -50vw;
+			font-size: 2em;
+		}
 	}
 
 	#practice-bkgd-box {
-		// width: 25%;
-		left: 60vw;
-		// height: 400px;
 		#practice-info {
 			text-align: center;
 			padding: 20px;
@@ -221,18 +226,6 @@
 			opacity: 0;
 			align-items: center;
 		}
-
-		// .social-link:nth-child(1) {
-		// 	transform: translate(0px, -30px);
-		// }
-
-		// .social-link:nth-child(2) {
-		// 	transform: translate(0px, 20px);
-		// }
-
-		// .social-link:nth-child(3) {
-		// 	transform: translate(0px, 50px);
-		// }
 	}
 }
 	
@@ -244,83 +237,85 @@
 
 /* == social section == */
 #social-section {
-	display: relative;
+	display: absolute;
 	height: 600px;
+	z-index: -1000;
 }
 
 /* == contact section == */
-#social-section {
-	// display: relative;
-	// height: 600px;
-	#practice-upper-box {
-		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+#contact-section {
+	#contact-upper-box {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 50%);
 		overflow: hidden;
+		color: $secondary-text-color;
+
+		.social5 {
+			color: $primary-theme-color;
+		}
+
+		#social4 {
+			font-size: $subtext-size;
+			width: 40vw;
+			margin-left: -50vw;
+		}
+		#contact-text {
+			text-align: center;
+			padding: 20px;
+			margin-left: 100vw;
+			width: 350px;
+
+			p {
+				margin: 0;
+			}
+
+			#contactText1 {
+				font-size: 2em;
+			}
+			#contactText2 {
+				margin-top: 10px;
+			}
+			#contactText3 {
+				margin-top: 15px;
+				font-size: $subtext-size;
+				opacity: 0;
+			}
+		}
 	}
 }
 
-// .small-box {
-// 	width: 240px;
-// 	margin: auto;
-// }
 
-// .mid-box {
-// 	width: 360px;
-// 	margin: auto;
-// }
+/* == footer == */
+#footer {
+	display: flex;
+	height: 500px;
+	align-items: flex-end;
 
+	#footer-text {
+		width: 100vw;
+		position: absolute;
+		background: $primary-theme-color;
+		color: $secondary-text-color;
+	}
 
-// about section
-// #about-section {
-// 	// height: 400px;
-// 	h1 {
-// 		color: $primary-text-color;
-// 	}
-// }
+	#footer-contact {
+		display: flex;
+		text-align: center;
+		padding-top: $small-mp;
 
-// #practice-section {
-// 	// top: -200px;
-// }
+		a {
+			flex: 1;
+		}
+	}
 
-// // practice & contact sections
-// #practice-section,
-// #contact-section {
-// 	text-align: center;
-// 	background: $primary-theme-color; 
-// 	color: $secondary-text-color;
-// 	padding: 100px;
-// 	height: 500px;
-// 	clip-path: polygon(0% 0%, 100% 10%, 100% 80%, 0% 100%);
-// 	overflow: visible;
-// 	z-index: 100;
-// }
+	.credit {
+		opacity: 0.3;
+		font-size: 10px;
+		width: 100vw;
+		text-align: center;
+		bottom: 0px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
 
-// // fb section
-// #fb-section {
-// 	// top:-300px;
-// 	position:relative;
-// 	height: 500px;
-//     background: $primary-theme-color; /* For browsers that do not support gradients */
-//     background: -webkit-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Safari 5.1 to 6.0 */
-//     background: -o-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Opera 11.1 to 12.0 */
-//     background: -moz-linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* For Firefox 3.6 to 15 */
-//     background: linear-gradient($primary-theme-color, $primary-theme-color, $secondary-link-color, $primary-theme-color, $primary-theme-color); /* Standard syntax (must be last) */ 
-// 	color: $secondary-text-color;
-// 	padding: 100px;
-// 	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
-// }
+}
 
-// #fb-section,
-// #credit-section {
-// 	text-align: center;
-// 	overflow: visible;
-// }
-
-// #practice-info {
-// 	width:50vw;
-// 	left: 0;
-// }
-
-/* ============================= boxes ============================= */
-
-
-/* ============================= background ============================= */

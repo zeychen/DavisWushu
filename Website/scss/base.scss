@@ -40,7 +40,7 @@
 		position: absolute;
 		top: 100px;
 		margin: auto;
-		z-index: 100;
+		z-index: 1000;
 		width: 100%;
 
 		.navbar {
@@ -55,6 +55,10 @@
 				padding-left: 30px;
 				padding-right: 30px;
 				color: $secondary-text-color;
+
+				.nav-item {
+					color: $secondary-text-color;
+				}
 			}
 		}	
 	}
@@ -112,6 +116,7 @@
 	#about-upper-box {
 		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
 		overflow: hidden;
+		z-index: 100;
 
 		#about-text {
 			padding-top: $large-mp;
@@ -123,30 +128,95 @@
 
 	#about-bkgd-box{
 		display: flex;
+		
 
 		.about-bkgd{
-			display: inline-block;
 			margin: auto;
 			text-align: center;
 			flex: 1;
+			height: 100px;
+			width: auto;	
+			overflow: hidden;
 
-			h1{
-				padding-top: 200px;
-				opacity: 0;
+			* {
+				position: relative;
 			}
+
+			.overlay {
+			  position: relative;
+			}
+
+			.overlay:before{
+			  background-color: rgba(0,0,0,0.3);
+			  position: absolute;
+			  content:" ";
+			  top:0;
+			  left:0;
+			  width:100%;
+			  height:100%;
+			  display: block;
+			  // z-index:0;
+			}
+
+			.overlay:hover:before{
+			  display: none;
+
+			}
+
+			.overlay:hover h1{
+				display: none;
+			}
+
+			.about-bkgd-inner {
+				height: 100%;
+				-webkit-transition-duration: 1s;
+				-webkit-transition-property: transform;
+				transition-duration: 1s;
+				transition-property: transform;
+
+				h1 {
+					text-align: center;
+					color: $secondary-text-color;
+					z-index: 100;
+					padding-top: 100%;
+					font-size: 3em;
+					letter-spacing: 3px;
+					position: relative;
+				}			
+			}
+			.about-bkgd-inner:hover {
+				transform: scale(1.1);
+			}
+			#about1 {
+				background: url('../img/about1.jpg') center no-repeat;
+				background-size: cover;
+			}
+
+			#about2 {
+				background: url('../img/about2.jpg') center no-repeat;
+				background-size: cover;
+			}
+			#about3 {
+				background: url('../img/about3.jpg') center no-repeat;
+				background-size: cover;
+			}		
 		}
+
+		.outer-box{
+			overflow: hidden;	
+		}		
 	}
 
 	#about-lower-box {
 		clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%);
-		display: block;
+		z-index: 10;
 	}
 }
 
 #member-box {
 	left: 60vw;
-	transform: translate(0px, 60px);
-	// position: absolute;
+	z-index: 500;
+	transform: translate(0px, -60px);
 
 	.member-link {
 		padding: 10px;
@@ -158,7 +228,12 @@
 }
 
 #instabkgd {
-	height: 600px;
+	background: url('../img/member.jpg') center no-repeat;
+	background-size: cover;
+	width: 100%;
+	display: block;
+	height: 700px;
+	z-index:-10;
 }
 
 /* == practice section == */
@@ -166,12 +241,24 @@
 	#practice-upper-box {
 		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
 		overflow: hidden;
+		z-index: 30;
 
 		#practice-title {
 			padding-top: $large-mp;
 			margin-left: -50vw;
 			font-size: 2em;
 		}
+	}
+
+	#practice-upper-box-right {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 20%);
+		overflow: hidden;
+		width: 100vw;
+		height: 200px;
+		position: absolute;
+		background: $primary-theme-color;
+		z-index: 10;
+		// color: $secondary-text-color;
 	}
 
 	#practice-bkgd-box {
@@ -215,6 +302,7 @@
 	#practice-lower-box {
 		clip-path: polygon(0% 0%, 100% 50%, 100% 100%, 0% 100%);
 		display: flex;
+		z-index: 100;
 
 		.social-link {
 			color: $secondary-text-color;
@@ -233,13 +321,17 @@
 	left: 10vw;
 	text-align: left;
 	opacity: 0;
+	z-index: 50;
 }
 
 /* == social section == */
 #social-section {
+	background: url('../img/social.jpg') center no-repeat;
+	background-size: cover;
 	display: absolute;
 	height: 600px;
 	z-index: -1000;
+	transform: translate(0px, 300px);
 }
 
 /* == contact section == */
@@ -287,8 +379,11 @@
 /* == footer == */
 #footer {
 	display: flex;
-	height: 500px;
+	height: 800px;
 	align-items: flex-end;
+	background: url('../img/footer.jpg') center no-repeat;
+	background-size: cover;
+	display: absolute;
 
 	#footer-text {
 		width: 100vw;

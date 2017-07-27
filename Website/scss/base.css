@@ -60,7 +60,8 @@ a {
 .lower-box {
   width: 100%;
   height: 200px;
-  background: #01243C; }
+  background: #01243C;
+  position: absolute; }
 
 header {
   background-image: none, url("green-circle.svg"); }
@@ -95,7 +96,7 @@ header {
     position: absolute;
     top: 100px;
     margin: auto;
-    z-index: 100;
+    z-index: 1000;
     width: 100%; }
     #header #nav .navbar {
       padding: 0px; }
@@ -106,6 +107,8 @@ header {
         padding-left: 30px;
         padding-right: 30px;
         color: #ffffff; }
+        #header #nav .navbar li .nav-item {
+          color: #ffffff; }
   #header #welcome {
     text-align: center;
     position: absolute;
@@ -143,7 +146,8 @@ header {
   position: relative; }
   #about-section #about-upper-box {
     clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
-    overflow: hidden; }
+    overflow: hidden;
+    z-index: 100; }
     #about-section #about-upper-box #about-text {
       padding-top: 50px;
       font-size: 1.2em;
@@ -152,36 +156,94 @@ header {
   #about-section #about-bkgd-box {
     display: flex; }
     #about-section #about-bkgd-box .about-bkgd {
-      display: inline-block;
       margin: auto;
       text-align: center;
-      flex: 1; }
-      #about-section #about-bkgd-box .about-bkgd h1 {
-        padding-top: 200px;
-        opacity: 0; }
+      flex: 1;
+      height: 100px;
+      width: auto;
+      overflow: hidden; }
+      #about-section #about-bkgd-box .about-bkgd * {
+        position: relative; }
+      #about-section #about-bkgd-box .about-bkgd .overlay {
+        position: relative; }
+      #about-section #about-bkgd-box .about-bkgd .overlay:before {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        content: " ";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block; }
+      #about-section #about-bkgd-box .about-bkgd .overlay:hover:before {
+        display: none; }
+      #about-section #about-bkgd-box .about-bkgd .overlay:hover h1 {
+        display: none; }
+      #about-section #about-bkgd-box .about-bkgd .about-bkgd-inner {
+        height: 100%;
+        -webkit-transition-duration: 1s;
+        -webkit-transition-property: transform;
+        transition-duration: 1s;
+        transition-property: transform; }
+        #about-section #about-bkgd-box .about-bkgd .about-bkgd-inner h1 {
+          text-align: center;
+          color: #ffffff;
+          z-index: 100;
+          padding-top: 100%;
+          font-size: 3em;
+          letter-spacing: 3px;
+          position: relative; }
+      #about-section #about-bkgd-box .about-bkgd .about-bkgd-inner:hover {
+        transform: scale(1.1); }
+      #about-section #about-bkgd-box .about-bkgd #about1 {
+        background: url("../img/about1.jpg") center no-repeat;
+        background-size: cover; }
+      #about-section #about-bkgd-box .about-bkgd #about2 {
+        background: url("../img/about2.jpg") center no-repeat;
+        background-size: cover; }
+      #about-section #about-bkgd-box .about-bkgd #about3 {
+        background: url("../img/about3.jpg") center no-repeat;
+        background-size: cover; }
+    #about-section #about-bkgd-box .outer-box {
+      overflow: hidden; }
   #about-section #about-lower-box {
     clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%);
-    display: block; }
+    z-index: 10; }
 
 #member-box {
   left: 60vw;
-  transform: translate(0px, 60px); }
+  z-index: 500;
+  transform: translate(0px, -60px); }
   #member-box .member-link {
     padding: 10px; }
   #member-box .member-link:hover a {
     color: #8F0030; }
 
 #instabkgd {
-  height: 600px; }
+  background: url("../img/member.jpg") center no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: block;
+  height: 700px;
+  z-index: -10; }
 
 /* == practice section == */
 #practice-section #practice-upper-box {
   clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 30; }
   #practice-section #practice-upper-box #practice-title {
     padding-top: 50px;
     margin-left: -50vw;
     font-size: 2em; }
+#practice-section #practice-upper-box-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 20%);
+  overflow: hidden;
+  width: 100vw;
+  height: 200px;
+  position: absolute;
+  background: #01243C;
+  z-index: 10; }
 #practice-section #practice-bkgd-box #practice-info {
   text-align: center;
   padding: 20px;
@@ -210,7 +272,8 @@ header {
     margin: 15px; }
 #practice-section #practice-lower-box {
   clip-path: polygon(0% 0%, 100% 50%, 100% 100%, 0% 100%);
-  display: flex; }
+  display: flex;
+  z-index: 100; }
   #practice-section #practice-lower-box .social-link {
     color: #ffffff;
     margin: auto;
@@ -224,13 +287,17 @@ header {
 #practice-box {
   left: 10vw;
   text-align: left;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 50; }
 
 /* == social section == */
 #social-section {
+  background: url("../img/social.jpg") center no-repeat;
+  background-size: cover;
   display: absolute;
   height: 600px;
-  z-index: -1000; }
+  z-index: -1000;
+  transform: translate(0px, 300px); }
 
 /* == contact section == */
 #contact-section #contact-upper-box {
@@ -262,8 +329,11 @@ header {
 /* == footer == */
 #footer {
   display: flex;
-  height: 500px;
-  align-items: flex-end; }
+  height: 800px;
+  align-items: flex-end;
+  background: url("../img/footer.jpg") center no-repeat;
+  background-size: cover;
+  display: absolute; }
   #footer #footer-text {
     width: 100vw;
     position: absolute;

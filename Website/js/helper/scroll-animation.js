@@ -23,10 +23,12 @@ $(document).ready(function(){
 	});
 
 	/* =============== Parallax =============== */
-	var parallax1 = new ScrollMagic.Scene({triggerElement: "#about-section"})
-		.setTween("#about-bkgd-box, #about-lower-box", {y: "80%", ease: Linear.easeNone})
-		// .addIndicators({name: "parallax 1"})
-		.addTo(centerController);
+	// var parallax = new ScrollMagic.Scene({triggerElement: "#about-section"})
+	// 	.setTween("#about-bkgd-box", {y: "80%", ease: Linear.easeNone})
+	// 	// .addIndicators({name: "parallax 1"})
+	// 	.addTo(centerController);
+
+
 
 	var parallax2 = new ScrollMagic.Scene({triggerElement: "#practice-section"})
 		.setTween("#practice-box", 1, {y: "30%", ease: Power2.easeInOut, opacity: 1})
@@ -43,25 +45,30 @@ $(document).ready(function(){
 		// .addIndicators({name: "parallax 4"})
 		.addTo(centerController);
 
-	var parallax5 = new ScrollMagic.Scene({triggerElement: "#member-box"})
-		.setTween("#practice-section", {y: "50%", ease: Linear.easeNone})
-		// .addIndicators({name: "parallax 5"})
-		.addTo(leaveController);
+	// var parallax5 = new ScrollMagic.Scene({triggerElement: "#member-box"})
+	// 	.setTween("#practice-section", {y: "50%", ease: Linear.easeNone})
+	// 	// .addIndicators({name: "parallax 5"})
+	// 	.addTo(leaveController);
 
-	var parallax6 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
-		.setTween('#social-section', {y: "65%", ease: Linear.easeNone})
-		// .addIndicators({name: "parallax 6"})
-		.addTo(centerController);
+	// var memberBkgd = new ScrollMagic.Scene({triggerElement: "#member-box", duration: 400})
+	// 	.setTween("#instabkgd",  {y: "50%", ease: Linear.easeNone})
+	// 	.addIndicators({name: "member"})
+	// 	.addTo(leaveController);
+
+	// var parallax6 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
+	// 	.setTween('#social-section', {y: "65%", ease: Linear.easeNone})
+	// 	// .addIndicators({name: "parallax 6"})
+	// 	.addTo(centerController);
 
 	var parallax7 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
 		.setTween('#contact-upper-box', {y: "100%", ease: Linear.easeNone})
 		// .addIndicators({name: "parallax 7"})
 		.addTo(centerController);
 
-	var parallax8 = new ScrollMagic.Scene({triggerElement: '#contact-section', duration: '10'})
-		.setTween('#footer', {y: "80%", ease: Linear.easeNone})
-		// .addIndicators({name: "parallax 8"})
-		.addTo(centerController);
+	// var parallax8 = new ScrollMagic.Scene({triggerElement: '#contact-section', duration: '10'})
+	// 	.setTween('#footer', {y: "80%", ease: Linear.easeNone})
+	// 	// .addIndicators({name: "parallax 8"})
+	// 	.addTo(centerController);
 
 	/* =============== Animation =============== */
 	// var fiveStance = TweenMax.to();
@@ -94,16 +101,34 @@ $(document).ready(function(){
 		.addTo(leaveController);
 
 	/* =============== About Section =============== */
+	var aboutBkgd = new ScrollMagic.Scene({triggerElement: "#about-section"})
+		.setTween(".about-bkgd",2, {height: '700px'})
+		// .addIndicators({name: "parallax 1"})
+		.addTo(centerController);
+
+	var aboutLowerBox = new ScrollMagic.Scene({triggerElement: "#about-section"})
+		.setTween("#about-lower-box", {y: "-150px", ease: Linear.easeNone})
+		// .addIndicators({name: "parallax 1"})
+		.addTo(centerController);
+
 	var aboutSection = new ScrollMagic.Scene({offset: ofHeight})
 		.setTween('#about-text', 1, {marginLeft: '10vw'})
 		// .addIndicators({name: "4"})
 		.addTo(leaveController);
 
-	var aboutBkgdTween = new TweenMax.to('#endurance, #flexibility, #strength', 1, {opacity: '0.5'});
+	// var aboutBkgdTween = new TweenMax.to('#endurance', 1, {opacity: '0.5', y: '30px'});
 
 	var endurance = new ScrollMagic.Scene({triggerElement: '#about-section'})
-		.setTween(aboutBkgdTween)
-		// .addIndicators({name: "6"})
+		.setTween('#endurance', 1, {opacity: '1', y: '30px', delay: 0.5})
+		// .addIndicators({name: "about text"})
+		.addTo(centerController);
+	var flexibility = new ScrollMagic.Scene({triggerElement: '#about-section'})
+		.setTween('#flexibility', 1, {opacity: '1', delay: 1.5})
+		// .addIndicators({name: "about text"})
+		.addTo(centerController);
+	var strength = new ScrollMagic.Scene({triggerElement: '#about-section'})
+		.setTween('#strength', 1, {opacity: '1', y: '-30px', delay: 2.5})
+		// .addIndicators({name: "about text"})
 		.addTo(centerController);
 
 	/* =============== Practice Section =============== */
@@ -111,6 +136,8 @@ $(document).ready(function(){
 		.setTween('#practice-title', 1, {marginLeft: '10vw'})
 		// .addIndicators({name: "5"})
 		.addTo(centerController);
+
+
 
 	/* =============== Social Section =============== */
 	var socialLink = new ScrollMagic.Scene({triggerElement: '#trigger2'})
@@ -139,15 +166,15 @@ $(document).ready(function(){
 		.addTo(centerController);
 
 	/* =============== Contact Section =============== */
-	var contactSection = new ScrollMagic.Scene({triggerElement: '#contact-section'})
+	var contactSection = new ScrollMagic.Scene({triggerElement: '#practice-lower-box'})
 		.setTween('#contact-text', 1, {marginLeft: '60vw', y: '-68px'})
 		// .addIndicators({name: "contact text"})
-		.addTo(centerController);
+		.addTo(leaveController);
 
-	var emailText = new ScrollMagic.Scene({triggerElement: '#contact-section'})
-		.setTween('#contactText3', 0.5, {opacity: 1, delay: 1})
+	var emailText = new ScrollMagic.Scene({triggerElement: '#practice-lower-box'})
+		.setTween('#contactText3', 1.5, {opacity: 1, delay: 1})
 		// .addIndicators({name: "contact text"})
-		.addTo(centerController);
+		.addTo(leaveController);
 
 	/* =============== Helper Functions =============== */
 	// change controller to scroll instead of jump
@@ -160,6 +187,9 @@ $(document).ready(function(){
 		var id = $(this).attr("href");
 		if ($(id).length > 0) {
 			e.preventDefault();
+
+			// var idPos = $(this).scrollTop()+52;
+			// console.log($(id).length);
 
 			// trigger scroll
 			leaveController.scrollTo(id);

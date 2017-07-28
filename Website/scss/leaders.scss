@@ -2,6 +2,57 @@
 @import 'general';
 @import 'svg';
 
+.leader-section {
+	// z-index: 50;
+	position: relative;
+	background: $secondary-theme-color;
+	overflow: hidden;
+	max-width: 60%;
+	padding: $regular-mp;
+
+	.leader-section-header {
+		text-align: center;
+		padding-bottom: $small-mp;
+		font-size: $text-size;
+
+		.leader-header {
+			color: $secondary-text-color;
+		}
+	}
+
+	.leaders-box {
+		display: flex;
+
+		.leaders {
+			flex: 1;
+			text-align: center;
+			padding-top: $small-mp;
+			padding-bottom: $regular-mp;
+
+			.leader-photo {
+				width: 120px;
+				height: 120px;
+			}
+
+			.leader-name {
+				color: $primary-text-color;
+				font-size: $text-size;
+				margin-bottom: 10px;
+				text-transform: capitalize;
+			}
+
+			.leader-title {
+				color: $secondary-text-color;
+				margin-top: 0px;
+				opacity: 0.7;
+				text-transform: capitalize;
+			}
+
+			
+		}
+	}	
+}
+
 /* ============================= sections ============================= */
 /* == officers == */
 #officer-section {

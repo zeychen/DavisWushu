@@ -59,24 +59,23 @@ var constants = {
 	],
 	"collaborate": [
 		{
-			"name": "Albert",
-			"title": "Head Coach",
-			"intro": "Hi, my name is Albert and I'm the Head Coach of Davis Wushu.",
-			"fun": "I love Wushu.",
-			"photo": "1"
-		},
-		{
-			"name": "Henderson",
-			"title": "Coach",
-			"intro": "Hi, my name is Henderson and I'm the Beginners Coach of Davis Wushu.",
-			"fun": "I love Wushu.",
-			"photo": "2"
+			"collabHeader": "Collaborate",
+			"collabText": "Need someone for your next event? Keep us in mind",
+			"instructLine1": "Send Us A Request",
+			"instructLine2": "Let us know about your event<br>be sure to include",
+			"instructLine3": "the purpose<br>location<br><span style='font-size: .6em;'>&</span><br>date",
+			"instructLine4": "We will get back to you as soon as possible about our availability",
 		}
 	]
 };
 
 // Add bio section to website
 constants.display = function() {
+
+	for (text in constants.gallery){
+		$("#gallery-title:last").append(constants.gallery[text].galleryHeader);
+		$("#gallery-text:last").append(constants.gallery[text].galleryText);
+	};
 
 	for (text in constants.leaders){
 		$("#officer-title:last").append(constants.leaders[text].officersHeader);
@@ -86,11 +85,15 @@ constants.display = function() {
 		$("#coaches-box-text:last").append(constants.leaders[text].coachesBox);
 	};
 
-	for (text in constants.gallery){
-		$("#gallery-title:last").append(constants.gallery[text].galleryHeader);
-		$("#gallery-text:last").append(constants.gallery[text].galleryText);
+	for (text in constants.collaborate){
+		$("#collaborate-title:last").append(constants.collaborate[text].collabHeader);
+		$("#collaborate-text:last").append(constants.collaborate[text].collabText);
+		$("#ins1:last").append(constants.collaborate[text].instructLine1);
+		$("#ins2:last").append(constants.collaborate[text].instructLine2);
+		$("#ins3:last").append(constants.collaborate[text].instructLine3);
+		$("#ins4:last").append(constants.collaborate[text].instructLine4);
 	};
 
-	
+
 };
 constants.display();

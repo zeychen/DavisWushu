@@ -8,10 +8,30 @@
 		<meta name="author" content="Zee Chen" />
 		<link rel="stylesheet" type="text/css" href="scss/base.css" />
 		<link href="https://fonts.googleapis.com/css?family=Muli|Lato:700" rel="stylesheet">
-		
+		<link rel="stylesheet" href="scss/animate.css">
+		<link rel="stylesheet" href="scss/modalite.min.css">
+		<link rel="stylesheet" type="text/css" href="scss/home.css" />
 
 	<body>
-		<div class="spacer s0"></div>
+		<!-- <p data-open-modal="modal-demo">Trigger Element</p> -->
+		<div class="md-modal md-effect-1" id="modal-1">
+			<div class="md-content">
+				<h3>Modal Dialog</h3>
+				<div>
+					<p>This is a modal window. You can do the following things with it:</p>
+					<ul>
+						<li><strong>Read:</strong> Modal windows will probably tell you something important so don't forget to read what it says.</li>
+						<li><strong>Look:</strong> modal windows enjoy a certain kind of attention; just look at it and appreciate its presence.</li>
+						<li><strong>Close:</strong> click on the button below to close the modal.</li>
+					</ul>
+					<button class="md-close">Close me!</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="md-overlay"></div> 
+
+
 		<section class="section" id="header">
 			<div id="video-background">
 			    <div id="video-foreground">
@@ -21,12 +41,18 @@
 			    <div class="tint2"></div>
 			</div>
 			<div id="nav">
-				<ul class="navbar">
+				<ul class="navbar" id="home-nav">
 					<li><a href="#about-section" class="nav-item">About</a></li>
 					<li><a href="#practice-section" class="nav-item">Practices</a></li>
-					<li><a href="#about-section" class="nav-item">Gallery</a></li>
-					<li><a href="#about-section" class="nav-item">Leaders</a></li>
-					<li><a href="#about-section" class="nav-item">Collaborate</a></li>
+					<li><a href="gallery.html" class="nav-item">Gallery</a></li>
+					<li class="dropdown">
+						<a href="leaders.html" class="nav-item">Leaders</a>
+						<div class="dropdown-content">
+							<a href="leaders.html#officer-lower-box">Officers</a>
+							<a href="leaders.com#coach-upper-box">Coaches</a>
+						</div>
+					</li>
+					<li><a href="collaborate.html" class="nav-item">Collaborate</a></li>
 				</ul>
 			</div>
 			<div id="welcome">
@@ -78,14 +104,14 @@
 				<h1 id="officers">Officers</h1>
 				<p class="description-text">Our officers are dedicated students who make sure Davis Wushu thrives.</p>
 				<p class="member-link">
-					<a href="leaders.html/#officers">Meet The Officers</a>
+					<a href="leaders.html#officers">Meet The Officers</a>
 				</p>
 			</div>
 			<div>
 				<h1>Coaches</h1>
 				<p class="description-text">Our coaches are well trained Wushu practitioners who take time out of their busy student lives to teach others members who are interested in learning or improving their skills.</p>
 				<p class="member-link">
-					<a href="leaders.html/#coaches">Meet The Coaches</a>
+					<a href="leaders.html#coaches">Meet The Coaches</a>
 				</p>
 			</div>
 		</section>
@@ -123,7 +149,7 @@
 				</div>
 				<div class="social-link" id="fb-link">
 					<p id="social3">
-						<a>Join Our FB Group</a>
+						<a href="https://www.facebook.com/groups/252321617687/" target="_blank">Join Our FB Group</a>
 					</p>
 				</div>
 			</div>
@@ -137,12 +163,16 @@
 		<section class="section" id="contact-section">
 			<div class="upper-box" id="contact-upper-box">
 				<div id="social-text">
-					<p id="social4"><a class="social5">Follow Us On Instagram</a></p>
+					<p id="social4">
+						<a href="https://www.instagram.com/daviswushu/" target="_blank">Follow Us On Instagram</a>
+					</p>
 				</div>
 				<div id="contact-text">
 					<p id="contactText1">Have More Questions?</p>
 					<p id="contactText2">Whether you want us at your next event or simply to say hi</p>
-					<p id="contactText3"><a class="social5">We are a quick email away</a></p>
+					<p id="contactText3">
+						<a href="mailto:DavisWushu@gmail.com">We are a quick email away</a>
+					</p>
 				</div>
 			</div>
 			
@@ -152,13 +182,15 @@
 			<div id="footer-text">
 				<div id="footer-contact">
 					<a href="#practice-section">Practice Times</a>
-					<a href="" target="_blank">Facebook Group</a>
-					<a href="" target="_blank">Instagram</a>
-					<a href="">Email</a>
+					<a href="https://www.facebook.com/DavisWushu/" target="_blank">Facebook Page</a>
+					<a href="https://www.instagram.com/daviswushu/" target="_blank">Instagram</a>
+					<a href="mailto:DavisWushu@gmail.com">Email</a>
 				</div>
-				<p class="credit">website designed and created by <a href="">Zee Chen</a> and Wushu vector art by <a target="_blank" href="https://www.vecteezy.com/">Vecteezy</a></p>
+				<p class="credit">website designed and created by <a href="">Zee Chen</a></p>
 			</div>
 		</section>
+
+		
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
@@ -168,6 +200,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>		
 		<script src="js/helper/helper.js"></script>
 		<script src="js/helper/scroll-animation.js"></script>
+		<script src="js/helper/animation.js"></script>
+		<script src="js/helper/modalite.min.js"></script>
+		
 		
 	</head>
 	</body>

@@ -2,6 +2,13 @@
 @import 'general';
 @import 'svg';
 
+
+#footer-contact a:hover,
+.member-link a:hover {
+	color: $secondary-link-color;
+}
+
+/* == header == */
 #header {
 	height: 100vh;
 
@@ -43,6 +50,10 @@
 		z-index: 1000;
 		width: 100%;
 
+		#home-nav li .nav-item{
+			color: $secondary-text-color;
+		}
+
 		.navbar {
 			padding: 0px;
 
@@ -52,13 +63,16 @@
 
 			li {
 				display: inline-block;
-				padding-left: 30px;
-				padding-right: 30px;
-				color: $secondary-text-color;
 
-				.nav-item {
-					color: $secondary-text-color;
+				a {
+					padding: 16px;
+					padding-left: 30px;
+					padding-right: 30px;
 				}
+			}
+
+			li:hover .nav-item{
+				background: $hover-link-color;
 			}
 		}	
 	}
@@ -106,272 +120,39 @@
 	}
 }
 
-/* ============================= sections ============================= */
-/* == about section == */
-#about-section{
-	margin: 0;
-	width: 100vw;
-	position: relative;
-
-	#about-upper-box {
-		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
-		overflow: hidden;
-		z-index: 100;
-
-		#about-text {
-			padding-top: $large-mp;
-			font-size: $subtext-size;
-			width: 40vw;
-			margin-left: -50vw;
-		}
-	}
-
-	#about-bkgd-box{
-		display: flex;
+#oheader {
+	#nav {
+		background: $primary-theme-color;
+		text-align: center;
+		margin: auto;
+		z-index: 1000;
+		width: 100%;
+		position: fixed;
 		
 
-		.about-bkgd{
-			margin: auto;
-			text-align: center;
-			flex: 1;
-			height: 100px;
-			width: auto;	
-			overflow: hidden;
+		.navbar {
+			padding: 0px;
+			z-index: 1000;
 
-			* {
-				position: relative;
+			ul {
+				list-style-type: none;
 			}
 
-			.overlay {
-			  position: relative;
+			li {
+				display: inline-block;
+				color: $primary-link-color;
+
+				a {
+					padding: 16px;
+					padding-left: 30px;
+					padding-right: 30px;
+				}
 			}
 
-			.overlay:before{
-			  background-color: rgba(0,0,0,0.3);
-			  position: absolute;
-			  content:" ";
-			  top:0;
-			  left:0;
-			  width:100%;
-			  height:100%;
-			  display: block;
-			  // z-index:0;
+			li:hover .nav-item{
+				background: $hover-link-color;
 			}
-
-			.overlay:hover:before{
-			  display: none;
-
-			}
-
-			.overlay:hover h1{
-				display: none;
-			}
-
-			.about-bkgd-inner {
-				height: 100%;
-				-webkit-transition-duration: 1s;
-				-webkit-transition-property: transform;
-				transition-duration: 1s;
-				transition-property: transform;
-
-				h1 {
-					text-align: center;
-					color: $secondary-text-color;
-					z-index: 100;
-					padding-top: 100%;
-					font-size: 3em;
-					letter-spacing: 3px;
-					position: relative;
-				}			
-			}
-			.about-bkgd-inner:hover {
-				transform: scale(1.1);
-			}
-			#about1 {
-				background: url('../img/about1.jpg') center no-repeat;
-				background-size: cover;
-			}
-
-			#about2 {
-				background: url('../img/about2.jpg') center no-repeat;
-				background-size: cover;
-			}
-			#about3 {
-				background: url('../img/about3.jpg') center no-repeat;
-				background-size: cover;
-			}		
-		}
-
-		.outer-box{
-			overflow: hidden;	
-		}		
-	}
-
-	#about-lower-box {
-		clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%);
-		z-index: 10;
-	}
-}
-
-#member-box {
-	left: 60vw;
-	z-index: 500;
-	transform: translate(0px, -60px);
-
-	.member-link {
-		padding: 10px;
-	}
-
-	.member-link:hover a{
-		color: $secondary-link-color;
-	}
-}
-
-#instabkgd {
-	background: url('../img/member.jpg') center no-repeat;
-	background-size: cover;
-	width: 100%;
-	display: block;
-	height: 700px;
-	z-index:-10;
-}
-
-/* == practice section == */
-#practice-section {
-	#practice-upper-box {
-		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
-		overflow: hidden;
-		z-index: 30;
-
-		#practice-title {
-			padding-top: $large-mp;
-			margin-left: -50vw;
-			font-size: 2em;
-		}
-	}
-
-	#practice-upper-box-right {
-		clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 20%);
-		overflow: hidden;
-		width: 100vw;
-		height: 200px;
-		position: absolute;
-		background: $primary-theme-color;
-		z-index: 10;
-		// color: $secondary-text-color;
-	}
-
-	#practice-bkgd-box {
-		#practice-info {
-			text-align: center;
-			padding: 20px;
-			margin-left: 60vw;
-			width: 25%;
-			opacity: 0;
-
-			p {
-				margin: 0;
-				color: $secondary-text-color;
-			}
-			#practiceText1 {
-				font-size: 1.5em;
-			}
-			#practiceText2 {
-				font-size: 3em;
-				font-weight: bold;
-				font-family: $header-font-stack;
-				letter-spacing: 2px;
-			}
-			#practiceText3 {
-				font-size: 1.2em;
-				margin-top: 15px;
-			}
-			#practiceText4 {
-				font-size: 1.5em;
-			}
-			#practiceText5 {
-				font-size: 1.5em;
-			}
-			#practiceText6 {
-				font-size: 1em;
-				margin: 15px;
-			}
-		}
-	}
-
-	#practice-lower-box {
-		clip-path: polygon(0% 0%, 100% 50%, 100% 100%, 0% 100%);
-		display: flex;
-		z-index: 100;
-
-		.social-link {
-			color: $secondary-text-color;
-			margin: auto;
-			display: inline-block;
-			text-align: center;
-			flex: 1;
-			font-size: $subtext-size;
-			opacity: 0;
-			align-items: center;
-		}
-	}
-}
-	
-#practice-box {
-	left: 10vw;
-	text-align: left;
-	opacity: 0;
-	z-index: 50;
-}
-
-/* == social section == */
-#social-section {
-	background: url('../img/social.jpg') center no-repeat;
-	background-size: cover;
-	display: absolute;
-	height: 600px;
-	z-index: -1000;
-	transform: translate(0px, 300px);
-}
-
-/* == contact section == */
-#contact-section {
-	#contact-upper-box {
-		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 50%);
-		overflow: hidden;
-		color: $secondary-text-color;
-
-		.social5 {
-			color: $primary-theme-color;
-		}
-
-		#social4 {
-			font-size: $subtext-size;
-			width: 40vw;
-			margin-left: -50vw;
-		}
-		#contact-text {
-			text-align: center;
-			padding: 20px;
-			margin-left: 100vw;
-			width: 350px;
-
-			p {
-				margin: 0;
-			}
-
-			#contactText1 {
-				font-size: 2em;
-			}
-			#contactText2 {
-				margin-top: 10px;
-			}
-			#contactText3 {
-				margin-top: 15px;
-				font-size: $subtext-size;
-				opacity: 0;
-			}
-		}
+		}	
 	}
 }
 
@@ -379,9 +160,9 @@
 /* == footer == */
 #footer {
 	display: flex;
-	height: 800px;
+	height: 100vh;
 	align-items: flex-end;
-	background: url('../img/footer.jpg') center no-repeat;
+	background: url('../img/background/footer.jpg') center no-repeat;
 	background-size: cover;
 	display: absolute;
 
@@ -413,4 +194,46 @@
 	}
 
 }
+
+
+
+/* ============================= animations ============================= */
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+
 

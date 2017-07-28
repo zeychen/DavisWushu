@@ -23,52 +23,25 @@ $(document).ready(function(){
 	});
 
 	/* =============== Parallax =============== */
-	// var parallax = new ScrollMagic.Scene({triggerElement: "#about-section"})
-	// 	.setTween("#about-bkgd-box", {y: "80%", ease: Linear.easeNone})
-	// 	// .addIndicators({name: "parallax 1"})
-	// 	.addTo(centerController);
-
-
-
-	var parallax2 = new ScrollMagic.Scene({triggerElement: "#practice-section"})
-		.setTween("#practice-box", 1, {y: "30%", ease: Power2.easeInOut, opacity: 1})
+	new ScrollMagic.Scene({triggerElement: "#practice-section"})
+		.setTween("#practice-box", 1, {y: "30%", ease: Linear.easeNone, opacity: 1})
 		// .addIndicators({name: "parallax 2"})
 		.addTo(centerController);
 
-	var parallax3 = new ScrollMagic.Scene({triggerElement: "#practice-section"})
+	new ScrollMagic.Scene({triggerElement: "#practice-section"})
 		.setTween("#practice-info", {y: "60%", ease: Linear.easeNone, opacity: 1})
 		// .addIndicators({name: "parallax 3"})
 		.addTo(centerController);
 		
-	var parallax4 = new ScrollMagic.Scene({triggerElement: "#practice-section"})
+	new ScrollMagic.Scene({triggerElement: "#practice-section"})
 		.setTween("#practice-lower-box", {y: "80%", ease: Linear.easeNone})
 		// .addIndicators({name: "parallax 4"})
 		.addTo(centerController);
 
-	// var parallax5 = new ScrollMagic.Scene({triggerElement: "#member-box"})
-	// 	.setTween("#practice-section", {y: "50%", ease: Linear.easeNone})
-	// 	// .addIndicators({name: "parallax 5"})
-	// 	.addTo(leaveController);
-
-	// var memberBkgd = new ScrollMagic.Scene({triggerElement: "#member-box", duration: 400})
-	// 	.setTween("#instabkgd",  {y: "50%", ease: Linear.easeNone})
-	// 	.addIndicators({name: "member"})
-	// 	.addTo(leaveController);
-
-	// var parallax6 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
-	// 	.setTween('#social-section', {y: "65%", ease: Linear.easeNone})
-	// 	// .addIndicators({name: "parallax 6"})
-	// 	.addTo(centerController);
-
-	var parallax7 = new ScrollMagic.Scene({triggerElement: '#trigger2'})
-		.setTween('#contact-upper-box', {y: "100%", ease: Linear.easeNone})
+	new ScrollMagic.Scene({triggerElement: '#trigger2'})
+		.setTween('#contact-upper-box', {y: "50%", ease: Linear.easeNone})
 		// .addIndicators({name: "parallax 7"})
 		.addTo(centerController);
-
-	// var parallax8 = new ScrollMagic.Scene({triggerElement: '#contact-section', duration: '10'})
-	// 	.setTween('#footer', {y: "80%", ease: Linear.easeNone})
-	// 	// .addIndicators({name: "parallax 8"})
-	// 	.addTo(centerController);
 
 	/* =============== Animation =============== */
 	// var fiveStance = TweenMax.to();
@@ -101,19 +74,19 @@ $(document).ready(function(){
 		.addTo(leaveController);
 
 	/* =============== About Section =============== */
-	var aboutBkgd = new ScrollMagic.Scene({triggerElement: "#about-section"})
-		.setTween(".about-bkgd",2, {height: '700px'})
-		// .addIndicators({name: "parallax 1"})
-		.addTo(centerController);
-
-	var aboutLowerBox = new ScrollMagic.Scene({triggerElement: "#about-section"})
+	new ScrollMagic.Scene({triggerElement: ".about-bkgd"})
 		.setTween("#about-lower-box", {y: "-150px", ease: Linear.easeNone})
 		// .addIndicators({name: "parallax 1"})
-		.addTo(centerController);
+		.addTo(leaveController);
 
-	var aboutSection = new ScrollMagic.Scene({offset: ofHeight})
+	new ScrollMagic.Scene({offset: ofHeight})
 		.setTween('#about-text', 1, {marginLeft: '10vw'})
 		// .addIndicators({name: "4"})
+		.addTo(leaveController);
+
+	new ScrollMagic.Scene({triggerElement: ".about-bkgd"})
+		.setTween("#instabkgd", {opacity: 1})
+		// .addIndicators({name: "parallax 1"})
 		.addTo(leaveController);
 
 	// var aboutBkgdTween = new TweenMax.to('#endurance', 1, {opacity: '0.5', y: '30px'});
@@ -136,8 +109,6 @@ $(document).ready(function(){
 		.setTween('#practice-title', 1, {marginLeft: '10vw'})
 		// .addIndicators({name: "5"})
 		.addTo(centerController);
-
-
 
 	/* =============== Social Section =============== */
 	var socialLink = new ScrollMagic.Scene({triggerElement: '#trigger2'})
@@ -188,13 +159,15 @@ $(document).ready(function(){
 		if ($(id).length > 0) {
 			e.preventDefault();
 
-			// var idPos = $(this).scrollTop()+52;
-			// console.log($(id).length);
 
-			// trigger scroll
-			leaveController.scrollTo(id);
+			if(id == '#practice-section' && $(this).offset().top <= $(window).height()* 0.5) {
+				centerController.scrollTo(id);
+			} else {
 
-				// if supported by the browser we can even update the URL.
+				leaveController.scrollTo(id);
+			}	
+
+			// if supported by the browser we can even update the URL.
 			if (window.history && window.history.pushState) {
 				history.pushState("", document.title, id);
 			}

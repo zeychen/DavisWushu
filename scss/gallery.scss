@@ -1,0 +1,40 @@
+@import 'declarations';
+@import 'general';
+@import 'svg';
+
+/* ============================= sections ============================= */
+#gallery-section {
+	#gallery-upper-box-blue {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+		overflow: hidden;
+		z-index: 30;
+		position: fixed;
+		transform: translate(-100%, -100%);
+
+		#gallery-title {
+			padding-top: $large-mp;
+			margin-top: 50px;
+			margin-left: -50vw;
+			font-size: 2em;
+		}
+
+		
+	}
+
+	#gallery-upper-box {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 30%);
+		overflow: hidden;
+		z-index: 30;
+		position: fixed;
+		transform: translate(100%, -100%);
+
+		#gallery-text {
+			width: 300px;
+			text-align: right;
+			margin-left: 100vw;
+			margin-top: 100px;
+		}
+		
+	}
+
+}

@@ -1,0 +1,128 @@
+@import 'declarations';
+@import 'general';
+@import 'svg';
+
+/* ============================= sections ============================= */
+#collaborate-section {
+	#collaborate-upper-box-blue {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);
+		overflow: hidden;
+		z-index: 30;
+		position: fixed;
+		transform: translate(-100%, -100%);
+
+		#collaborate-title {
+			padding-top: $large-mp;
+			margin-top: 50px;
+			margin-left: -50vw;
+			font-size: 2em;
+			text-transform: capitalize;
+		}
+
+		
+	}
+
+	#collaborate-upper-box {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 30%);
+		overflow: hidden;
+		z-index: 30;
+		position: fixed;
+		transform: translate(100%, -100%);
+
+		#collaborate-text {
+			width: 300px;
+			text-align: right;
+			margin-left: 100vw;
+			margin-top: 100px;
+			text-transform: capitalize;
+		}
+		
+	}
+
+
+	#collaborate-form {
+		position: absolute;
+		
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		overflow: hidden;
+
+		.contact {
+			flex: 1;
+			flex-grow: 1;
+			margin-top: 35vh;
+			margin-left: $large-mp;
+			margin-right: $large-mp;
+			
+
+			.instruction {
+				text-align: center;
+				margin: auto;
+				background: $primary-theme-color;
+				opacity: 0.9;
+				color: $secondary-text-color;
+			}
+
+			#ins1 {
+				padding: $regular-mp;
+				padding-bottom: 0px;
+				letter-spacing: 1.5px;
+				font-size: 2em;
+				text-transform: capitalize;
+			}
+
+			#ins2 {
+				padding-top: 0px;
+			}
+			#ins3 {
+				padding-top: $regular-mp;
+				font-size: $text-size;
+
+				span {
+					font-size: $subsubtext-size;
+				}
+			}
+			#ins4 {
+				padding: $regular-mp;
+			}
+		}
+	}
+}
+
+#contact-form {
+	z-index: 10;
+	width: 50vw;
+}
+
+input, textarea {
+	border: 1px solid #808080;
+	font-size: 12px;
+	padding: 10px 0;
+}
+
+textarea {
+	height: 200px;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	margin-bottom: 22px;
+	width: 96.2%;
+}
+
+input[type="text"] {
+	float: left;
+	margin-bottom: 8px;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	width: 46.4%;
+}
+
+input[type="submit"] {
+	background-color: $secondary-theme-color;
+	border: none;
+	color: $primary-text-color;
+	height: 45px;
+	width: 100%;
+	text-align: center;
+}
+

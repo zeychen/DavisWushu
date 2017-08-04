@@ -1,0 +1,10 @@
+html,
+body {
+	width: 100%;
+}
+
+.nav {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

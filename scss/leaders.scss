@@ -1,0 +1,155 @@
+@import 'declarations';
+@import 'general';
+@import 'svg';
+
+.leader-section {
+	// z-index: 50;
+	position: relative;
+	background: $secondary-theme-color;
+	overflow: hidden;
+	max-width: 60%;
+	padding: $regular-mp;
+
+	.leader-section-header {
+		text-align: center;
+		padding-bottom: $small-mp;
+		font-size: $text-size;
+
+		.leader-header {
+			color: $secondary-text-color;
+		}
+	}
+
+	.leaders-box {
+		display: flex;
+
+		.leaders {
+			flex: 1;
+			text-align: center;
+			padding-top: $small-mp;
+			padding-bottom: $regular-mp;
+
+			.leader-photo {
+				width: 120px;
+				height: 120px;
+			}
+
+			.leader-name {
+				color: $primary-text-color;
+				font-size: $text-size;
+				margin-bottom: 10px;
+				text-transform: capitalize;
+			}
+
+			.leader-title {
+				color: $secondary-text-color;
+				margin-top: 0px;
+				opacity: 0.7;
+				text-transform: capitalize;
+			}
+
+			
+		}
+	}	
+}
+
+/* ============================= sections ============================= */
+/* == officers == */
+#officer-section {
+
+	
+	#officer-upper-box {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+		overflow: hidden;
+		z-index: 30;
+
+		#officer-title {
+			padding-top: $large-mp;
+			margin-top: 40px;
+			margin-left: -50vw;
+			font-size: 2em;
+			text-transform: capitalize;
+		}
+	}
+
+	#officer-bkgd-box {
+		width: 100%;
+		height: 400px;
+		background: url('../img/background/leaders/officers.jpg') center no-repeat;
+		background-size: cover;
+		padding-top: 100px;
+	}
+
+	#officer-lower-box {
+		clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%);
+		transform: translate(0px, -200px);
+		overflow: hidden;
+		text-align: right;
+		text-transform: capitalize;
+
+		.leader-header {
+			display: block;
+		}
+
+		.officer-box {
+			padding: 20px;
+			width: 40vw;
+			margin-top: 30px;
+			color: $secondary-text-color;
+			margin-left: 50vw;
+		}
+	}
+
+	#officer-upper-box-blue {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+		overflow: hidden;
+		z-index: 30;
+	}
+}
+
+#officer-section-box {
+	left: 35%;
+	z-index: 150;
+	transform: translate(0, 50vh);
+}
+
+/* == coaches == */
+#coach-section {
+	#coach-upper-box-blue {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 50%);
+		overflow: hidden;
+		z-index: 100;
+
+		#coach-title {
+			padding-top: $large-mp;
+			margin-top: 40px;
+			margin-left: 100vw;
+			font-size: 2em;
+			text-transform: capitalize;
+		}
+	}
+
+	#coach-upper-box {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 80%);
+		overflow: hidden;
+		z-index: 30;
+	}
+}
+
+#coach-section-box {
+	min-width: 50vw;
+	position: absolute;
+	z-index: 150;
+	transform: translate(0, 30vh);
+	margin-left:-100vw;
+}
+
+
+#leader-bkgd {
+	height: 60vh;
+	width: 100vw;
+	position: absolute;
+	background: url('../img/background/leaders/coaches.jpg') center no-repeat;
+	background-size: cover;
+	transform: translate(0, -10vh);
+}

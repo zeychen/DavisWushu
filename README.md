@@ -8,6 +8,7 @@ Still in production.
 - replace placeholder photos and optimize for faster download
 - gather officers information
 - add modal for detail information
+- add responsiveness
 
 ## Languages
 - Javascript
